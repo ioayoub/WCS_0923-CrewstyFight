@@ -5,7 +5,7 @@ function CardList() {
   const [fighters, setFighters] = useState(null);
 
   useEffect(() => {
-    fetch("https://ioayoub.fr/api/mocks/mma-fighters")
+    fetch("https://ioayoub.fr/api/mma-fighters")
       .then((res) => res.json())
       .then((data) => setFighters(data))
       .catch((err) => console.error(err));

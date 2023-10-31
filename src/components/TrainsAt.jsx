@@ -1,12 +1,11 @@
 import PropTypes from "prop-types";
 
 import { useState, useEffect } from "react";
-
 function TrainsAt({ slug }) {
   const [fighter, setFighter] = useState(null);
 
   useEffect(() => {
-    fetch(`https://ioayoub.fr/api/mocks/mma-fighters/${slug}`)
+    fetch(`https://ioayoub.fr/api/mma-fighters/${slug}`)
       .then((res) => res.json())
       .then((data) => setFighter(data));
   }, [slug]);
